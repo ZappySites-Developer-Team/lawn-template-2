@@ -40,7 +40,7 @@
   /* Finish */
 
   /* Overlays */
-  --normal-green-overlay-top-bottom: linear-gradient(180deg, rgb(10, 47, 3) 0%, rgba(9, 40, 2, 0.7960434174) 33%, rgba(10, 45, 3, 0.6867997199) 65%, rgba(9, 46, 2, 0.5719537815) 84%);
+  --dark-green-overlay-top-bottom: linear-gradient(180deg, rgb(10, 47, 3) 0%, rgba(9, 40, 2, 0.7960434174) 33%, rgba(10, 45, 3, 0.6867997199) 65%, rgba(9, 46, 2, 0.5719537815) 84%);
   --black-overlay-top-bottom: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.8240546218) 33%, rgba(0, 0, 0, 0.7484243697) 65%, rgba(0, 0, 0, 0.7120098039) 84%);
   --light-green-overlay-top-bottom: linear-gradient(180deg, rgba(88, 195, 4, 0.8) 0%, rgba(88, 195, 4, 0.6) 33%, rgba(88, 195, 4, 0.5) 65%, rgba(88, 195, 4, 0.4) 84%);
 
@@ -52,7 +52,7 @@
   --navigation-link-hover-color: var(--primary);
 
   /* Hero */
-  --hero-overlay: var(--normal-green-overlay-top-bottom);
+  --hero-overlay: var(--dark-green-overlay-top-bottom);
   --hero-heading-color: var(--white);
   --hero-font-size: 50px;
   --hero-font-weight: 600;
@@ -621,6 +621,8 @@ nav .navbar-nav .nav-link:hover {
 @media (max-width: 1200px) {
   .logo {
     width: 95%;
+    height: auto;
+    min-height: auto;
   }
 
   .logo-section {
@@ -806,6 +808,15 @@ nav .navbar-nav .nav-link:hover {
   padding-left: 5rem;
 }
 
+@media (max-width: 1200px) {
+  .nav-hero .hero .hero-content .info-side {
+    width: 100%;
+    padding: 6rem 0;
+    background-color: inherit;
+    padding-left: 5rem;
+  }
+}
+
 .nav-hero .hero h1 {
   width: 95%;
   text-transform: capitalize;
@@ -836,13 +847,35 @@ nav .navbar-nav .nav-link:hover {
 /* IMG Side */
 .nav-hero .hero .hero-content .img-side {
   width: 50%;
+}
 
+@media (max-width: 1200px) {
+  .nav-hero .hero .hero-content .img-side {
+    width: 0%;
+    display: none;
+  }
 }
 
 .nav-hero .hero .hero-content .img-side img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.nav-hero .hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  object-fit: cover;
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .nav-hero .hero-img {
+    display: block;
+  }
 }
 
 
