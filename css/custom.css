@@ -54,7 +54,7 @@
     --upper-nav-icon-color: var(--white);
 
     /* Hero */
-    --hero-overlay: rgb(9, 97, 68, 0.7);
+    --hero-overlay: rgb(9, 97, 68, 0.8);
     --hero-heading-color: var(--white);
     --hero-font-size: 50px;
     --hero-font-weight: 600;
